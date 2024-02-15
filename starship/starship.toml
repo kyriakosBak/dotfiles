@@ -1,0 +1,39 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[aws]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[localip]
+ssh_only = true
+format = '@[$localipv4](bold red) '
+disabled = false
+
+[status]
+style = 'bg:transparent'
+symbol = '❌'
+format = '[\[$symbol$status\]]($style) '
+map_symbol = false
+disabled = false
+
+[sudo]
+style = 'bold green'
+symbol = '👩‍💻 '
+disabled = false
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%T'
+utc_time_offset = '1'
+time_range = '10:00:00-14:00:00'
