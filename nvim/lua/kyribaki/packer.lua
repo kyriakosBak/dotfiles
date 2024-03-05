@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Copilot
+    use ( "github/copilot.vim" )
+
     -- Useful information about keystrokes
     use {
         "folke/which-key.nvim",

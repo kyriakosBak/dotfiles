@@ -8,3 +8,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("v", "<leader>p", "\"_dP")
+
+
+-- GoLang
+vim.keymap.set("n", "<leader>ee", "iif err != nil {<CR>log.Fatal(err)<CR>}<ESC>")
