@@ -9,14 +9,18 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
+
+    -- Formatting
+    vim.keymap.set("n", "<leader>fo", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
+    lsp.buffer_autoformat()
 end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {},
-  handlers = {
-    lsp.default_setup,
-  },
+    ensure_installed = { 'gopls' },
+    handlers = {
+        lsp.default_setup,
+    },
 })
 
 lsp.preset("recommended")
