@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+sudo dnf install -y neovim python3-neovim
+
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+brew install neovim
+
+{{ else if eq .chezmoi.os "windows" -}}
+winget install NeoVim.NeoVim
+
+{{ end -}}
+
