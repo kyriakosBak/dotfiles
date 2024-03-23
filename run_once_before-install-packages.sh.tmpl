@@ -1,12 +1,13 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-sudo apt install ripgrep
 sudo dnf install ripgrep
+sudo dnf install tmux
 curl -sS https://starship.rs/install.sh | sh
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 brew install ripgrep
+brew install tmux
 curl -sS https://starship.rs/install.sh | sh
 
 {{ else if eq .chezmoi.os "windows" -}}
