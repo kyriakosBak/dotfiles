@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-dnf install ripgrep tmux thefuck -y
+dnf install ripgrep tmux thefuck -y || apt install ripgrep tmux thefuck -y
 curl -sS https://starship.rs/install.sh | sh
 
 {{ else if eq .chezmoi.os "darwin" -}}
