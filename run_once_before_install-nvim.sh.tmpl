@@ -1,0 +1,17 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+dnf install -y neovim python3-neovim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+brew install neovim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+{{ else if eq .chezmoi.os "windows" -}}
+winget install NeoVim.NeoVim
+
+{{ end -}}
+
