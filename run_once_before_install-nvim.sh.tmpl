@@ -1,8 +1,8 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-dnf install -y neovim python3-neovim || apt install -y neovim python3-neovim
+dnf install -y neovim python3-neovim || apt install -y neovim python3-neovim || true
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim || true
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh

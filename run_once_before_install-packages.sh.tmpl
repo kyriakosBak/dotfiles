@@ -1,9 +1,9 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-dnf install ripgrep tmux thefuck -y || apt install ripgrep tmux thefuck -y
+dnf install ripgrep tmux thefuck -y || apt install ripgrep tmux thefuck -y || true
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/JetBrainsMNerdFont-Regular.otf
-curl -sS https://starship.rs/install.sh | sh
+starship --version || curl -sS https://starship.rs/install.sh | sh || true
 
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
