@@ -232,7 +232,30 @@ require("lazy").setup({
 			end, { desc = "[S]earch [N]eovim files" })
 		end,
 	},
-
+	{
+		"tpope/vim-fugitive",
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+			},
+		},
+		config = function()
+			require("gitsigns").setup()
+			vim.keymap.set(
+				"n",
+				"<leader>gt",
+				":Gitsigns toggle_current_line_blame<CR>",
+				{ desc = "[G]itsigns [T]oggle blame" }
+			)
+		end,
+	},
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		dependencies = {
