@@ -291,6 +291,8 @@ require("lazy").setup({
 					--  Useful when your language has ways of declaring types without an actual implementation.
 					map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 
+					map("gs", vim.lsp.buf.signature_help, "[G]oto [s]ignatures")
+
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
@@ -319,6 +321,12 @@ require("lazy").setup({
 					-- Opens a popup that displays documentation about the word under your cursor
 					--  See `:help K` for why this keymap.
 					map("K", vim.lsp.buf.hover, "Hover Documentation")
+					vim.keymap.set(
+						"i",
+						"<C-h>",
+						vim.lsp.buf.hover,
+						{ buffer = event.buf, desc = "LSP: " .. "Hover Documentation" }
+					)
 
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
 					--  For example, in C this would take you to the header.
@@ -553,9 +561,9 @@ require("lazy").setup({
 	{
 		"mbbill/undotree",
 	},
-	{
-		"github/copilot.vim",
-	},
+	-- {
+	-- 	"github/copilot.vim",
+	-- },
 	{
 		"feline-nvim/feline.nvim",
 		config = function()
