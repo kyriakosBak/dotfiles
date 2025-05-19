@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export STARSHIP_CONFIG=~/.config/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 eval "$(thefuck --alias)"
 
