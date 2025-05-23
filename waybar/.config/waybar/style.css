@@ -4,13 +4,11 @@
   padding: 0;
   margin: 0;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 12px;
 }
 
 /* ------ Set a Uniform Border Radius ------ */
 .modules-left,
 .modules-center,
-.modules-right,
 #cpu,
 #memory,
 #custom-cpu_temp,
@@ -22,11 +20,16 @@
 #custom-updates,
 #language,
 #network,
-#battery,
-#battery#bat1,
 #tray,
 #idle_inhibitor,
 #custom-power,
+#custom-notification {
+  border-radius: 18px;
+  font-size: 12px;
+}
+
+/* Seperating so we can sent font-size for power menu */
+.modules-right,
 #custom-notification {
   border-radius: 18px;
 }
@@ -70,7 +73,7 @@ window#waybar {
 }
 
 /* -----------------------------------------------------
- * Workspaces 
+ * Workspaces
  * ----------------------------------------------------- */
 
 #workspaces button.empty {
@@ -152,14 +155,6 @@ window#waybar {
   margin: 4px 2px;
 }
 
-/* ------ Battery ------ */
-#battery {
-  color: @maroon;
-  background-color: @surface1;
-  padding: 2px 8px;
-  margin: 4px 2px;
-}
-
 /* ------ Clock ------ */
 #clock {
   padding-left: 6px;
@@ -185,7 +180,7 @@ window#waybar {
 #custom-power {
   color: @red;
   background-color: @surface1;
-  padding: 2px 13px 2px 10px;
+  padding: 2px 14px 2px 11px;
   margin: 4px 4px 4px 4px;
   font-size: 15px;
 }
@@ -203,3 +198,7 @@ tooltip {
   border: 1px solid @blue;
 }
 
+menuitem {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 22px;
+}

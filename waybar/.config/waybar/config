@@ -28,7 +28,9 @@
         "custom/power"
     ],
     "hyprland/language": {
-        "format": " {}"
+        "format": " {}",
+        "format-en": "US",
+        "format-gr": "GR"
     },
     // This is a custom cava visualizer
     "custom/cava_mviz": {
