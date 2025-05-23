@@ -13,6 +13,7 @@
 .modules-right,
 #cpu,
 #memory,
+#custom-cpu_temp,
 #temperature,
 #wireplumber,
 #backlight,
@@ -35,6 +36,7 @@
   background-color: @base;
   padding-right: 10px;
   padding-left: 17px;
+  margin: 4px;
 }
 
 /* ------ Modules Center ------ */
@@ -42,12 +44,13 @@
   background-color: @base;
   padding-right: 4px;
   padding-left: 4px;
+  margin: 4px;
 }
 
 /* ------ Modules Right ------ */
 .modules-right {
   background-color: @base;
-  padding-right: 4px;
+  padding-right: 0px;
   padding-left: 4px;
 }
 
@@ -133,6 +136,7 @@ window#waybar {
 }
 
 /* ------ Temperature ------ */
+#custom-cpu_temp,
 #temperature {
   color: @mauve;
   background-color: @surface1;
@@ -182,7 +186,7 @@ window#waybar {
   color: @red;
   background-color: @surface1;
   padding: 2px 13px 2px 10px;
-  margin: 4px 4px;
+  margin: 4px 4px 4px 4px;
   font-size: 15px;
 }
 
