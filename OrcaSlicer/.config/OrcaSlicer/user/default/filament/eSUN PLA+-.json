@@ -1,0 +1,16 @@
+{
+    "compatible_printers": [
+        "Voron Trident 300 0.4 nozzle"
+    ],
+    "filament_max_volumetric_speed": [
+        "24"
+    ],
+    "filament_settings_id": [
+        "eSUN PLA+-"
+    ],
+    "from": "User",
+    "inherits": "eSUN PLA+ @System",
+    "is_custom_defined": "0",
+    "name": "eSUN PLA+-",
+    "version": "2.3.0.3"
+}

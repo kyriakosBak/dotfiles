@@ -1,0 +1,40 @@
+{
+    "from": "User",
+    "inherits": "Voron Trident 300 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_max_acceleration_x": [
+        "10000",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "10000",
+        "20000"
+    ],
+    "machine_max_acceleration_z": [
+        "350",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "20",
+        "12"
+    ],
+    "machine_start_gcode": "PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single]\n; You can use following code instead if your PRINT_START macro support Chamber and print area bedmesh\n; PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] Chamber=[chamber_temperature] PRINT_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} PRINT_MAX={first_layer_print_max[0]},{first_layer_print_max[1]}",
+    "min_layer_height": [
+        "0.08"
+    ],
+    "name": "Voron Trident 300 0.4 nozzle-",
+    "nozzle_type": "brass",
+    "print_host": "http://192.168.0.100:80",
+    "printer_settings_id": "Voron Trident 300 0.4 nozzle-",
+    "retract_before_wipe": [
+        "0%"
+    ],
+    "retract_lift_enforce": [
+        "Top and Bottom"
+    ],
+    "support_multi_bed_types": "1",
+    "version": "2.3.0.3",
+    "z_hop_types": [
+        "Auto Lift"
+    ]
+}
