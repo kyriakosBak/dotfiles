@@ -12,6 +12,7 @@
         "hyprland/window"
     ],
     "modules-center": [
+        "custom/weather",
         "clock",
         "hyprland/workspaces"
     ],
@@ -130,5 +131,12 @@
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
         }
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3000,
+        "exec": "$HOME/.config/waybar/scripts/wttrbar/target/release/wttrbar --location Amsterdam",
+        "return-type": "json"
     }
 }
