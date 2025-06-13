@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin
+export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/home/kyribaki/.cargo/bin
 export GOPATH=$HOME/go
 
 # Path to your oh-my-zsh installation.
@@ -113,6 +113,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias air="~/go/bin/air"
+alias s="kitten ssh"
 
 PATH="/home/kyribaki/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/kyribaki/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;

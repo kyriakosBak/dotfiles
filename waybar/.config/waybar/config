@@ -85,7 +85,7 @@
             ]
         },
         "tooltip": false,
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol -t 3"
     },
     "cpu": {
         "format": "{usage} ",
@@ -134,11 +134,9 @@
         }
     },
     "custom/weather": {
-        "format": "{}°",
-        "tooltip": true,
-        "interval": 3000,
-        "exec": "$HOME/.config/waybar/scripts/wttrbar/target/release/wttrbar --location Amsterdam",
-        "return-type": "json"
+        "exec": "~/.cargo/bin/waybar-weather",
+        "return-type": "json",
+        "interval": 600
     },
     "custom/notification": {
         "tooltip": false,
