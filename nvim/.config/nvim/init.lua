@@ -38,7 +38,11 @@ vim.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- filetypes
 vim.cmd("autocmd BufNewFile,BufRead *.impl set filetype=cpp")
+vim.filetype.add({
+	pattern = { [".*/hyprland%.conf"] = "hyprlang" },
+})
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
