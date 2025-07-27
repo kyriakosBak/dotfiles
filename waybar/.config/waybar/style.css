@@ -206,7 +206,7 @@ window#waybar {
 #idle_inhibitor {
   color: @green;
   background-color: @surface1;
-  padding: 2px 9px;
+  padding: 2px 15px 2px 7px;
   margin: 4px 2px;
   font-size: 15px;
 }

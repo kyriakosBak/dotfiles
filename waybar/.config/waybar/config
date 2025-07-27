@@ -19,6 +19,7 @@
     "modules-right": [
         "mpd",
         "wireplumber",
+        "idle_inhibitor",
         "cpu",
         "memory",
         "custom/cpu_temp",
@@ -86,6 +87,13 @@
         },
         "tooltip": false,
         "on-click": "pavucontrol -t 3"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "cpu": {
         "format": "{usage} ",
