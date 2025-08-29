@@ -114,9 +114,14 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias air="~/go/bin/air"
 alias s="kitten ssh"
+alias update="sudo dnf update -y"
+alias restart-audio='sudo systemctl --user restart pipewire pipewire-pulse"
 
 PATH="/home/kyribaki/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/kyribaki/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/kyribaki/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/kyribaki/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/kyribaki/perl5"; export PERL_MM_OPT;
+
+# opencode
+export PATH=/home/kyribaki/.opencode/bin:$PATH
