@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/home/kyribaki/.cargo/bin
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/home/kyribaki/.cargo/bin:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -115,7 +115,8 @@ fi
 alias air="~/go/bin/air"
 alias s="kitten ssh"
 alias update="sudo dnf update -y"
-alias restart-audio='sudo systemctl --user restart pipewire pipewire-pulse"
+alias restart-audio="sudo systemctl --user restart pipewire pipewire-pulse"
+alias start-walker="walker --gapplication-service &"
 
 PATH="/home/kyribaki/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/kyribaki/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -125,3 +126,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/kyribaki/perl5"; export PERL_MM_OPT;
 
 # opencode
 export PATH=/home/kyribaki/.opencode/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
